@@ -1,11 +1,11 @@
 from random import *
 def cria_pecas():
-    lista_domin = []
+    lista_n = []
     for x in range (0,7):
         for y in range(0, 7):
             l = [x,y]
-            lista_invert = [y,x]
-            if lista_invert not in lista_domin:
-                lista_domin.append(l)
-    shuffle(lista_domin)
-    return lista_domin
+            lista_i = [y,x]
+            if lista_i not in lista_n:
+                lista_n.append(l)
+    shuffle(lista_n)
+    return lista_n
