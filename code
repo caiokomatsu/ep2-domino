@@ -1,8 +1,11 @@
+from random import *
 def cria_pecas():
-    pecas = [
-[0|0], [0|1], [0|2], [0|3], [0|4], [0|5], [0|6],
-[1|1], [1|2], [1|3], [1|4], [1|5], [1|6], [2|2],
-[2|3], [2|4], [2|5], [2|6], [3|3], [3|4], [3|5],
-[3|6], [4|4], [4|5], [4|6], [5|5], [5|6], [6|6]
-]
-    return pecas
+    lista_domin = []
+    for x in range (0,7):
+        for y in range(0, 7):
+            l = [x,y]
+            lista_invert = [y,x]
+            if lista_invert not in lista_domin:
+                lista_domin.append(l)
+    shuffle(lista_domin)
+    return lista_domin
