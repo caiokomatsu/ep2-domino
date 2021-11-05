@@ -9,3 +9,14 @@ def cria_pecas():
                 lista_n.append(l)
     shuffle(lista_n)
     return lista_n
+
+def inicia_jogo(n,p):
+    dic={'jogadores':{},'monte':[],'mesa':[]}
+    for elemento in range(0,n):
+        lista = []
+        for x in range(0,7):
+            lista.append(p[0])
+            del p[0]
+        dic['jogadores'][elemento] = lista
+    dic['monte'] = p
+    return dic
