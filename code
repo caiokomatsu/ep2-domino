@@ -34,3 +34,15 @@ def soma_pecas(l_pecas):
             l_total.append(y)
     tot = sum(l_total)
     return tot
+    
+def posicoes_possiveis(l_mesa, l_mao):
+    if l_mesa == []:
+        return list(range(len(l_mao)))
+    direita = l_mesa[-1][1]
+    esquerda = l_mesa[0][0]
+    l_posicao = []
+    for i in range(len(l_mao)):
+        peca = l_mao[i]
+        if peca[0] == direita or peca[0] == esquerda or peca[1] == direita or peca[1] == esquerda:
+            l_posicao.append(i)
+    return l_posicao
