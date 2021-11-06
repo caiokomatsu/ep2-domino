@@ -25,4 +25,12 @@ def verifica_ganhador(dicn):
     for i,valor in dicn.items():
         if len(valor) == 0:
             return i 
-    return -1    
+    return -1 
+    
+def soma_pecas(l_pecas):
+    l_total = []
+    for x in l_pecas:
+        for y in x:
+            l_total.append(y)
+    tot = sum(l_total)
+    return tot
