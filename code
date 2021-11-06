@@ -46,3 +46,25 @@ def posicoes_possiveis(l_mesa, l_mao):
         if peca[0] == direita or peca[0] == esquerda or peca[1] == direita or peca[1] == esquerda:
             l_posicao.append(i)
     return l_posicao
+    
+    
+def adiciona_na_mesa(pec, l_mesa):
+    if l_mesa == []:
+        l_mesa.append(pec)
+    else:
+        p_i = l_mesa[0]
+        p_f = l_mesa[-1]
+        n_i = p_i[0]
+        n_f = p_f[1]
+        p_inv = p[::-1]
+        if p[1] == n_i: 
+            l_mesa.insert(0, pec)
+        elif p_inv[1] == n_i: 
+            l_mesa.insert(0, p_inv) 
+        elif pec[0] == n_f: 
+            l_mesa.append(pec) 
+
+        elif p_inv[0] == n_f:
+            l_mesa.append(p_inv) 
+    return l_mesa
+    
