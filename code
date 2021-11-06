@@ -20,3 +20,9 @@ def inicia_jogo(n,p):
         dic['jogadores'][elemento] = lista
     dic['monte'] = p
     return dic
+
+def verifica_ganhador(dicn):
+    for i,valor in dicn.items():
+        if len(valor) == 0:
+            return i 
+    return -1    
